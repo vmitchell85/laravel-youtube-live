@@ -1,0 +1,54 @@
+{
+    "name": "vmitchell85/laravel-youtube-live",
+    "description": "A package to interact with Google's YouTube Live Streaming API",
+    "keywords": [
+        "vmitchell85",
+        "laravel-youtube-live"
+    ],
+    "homepage": "https://github.com/vmitchell85/laravel-youtube-live",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Vince Mitchell",
+            "email": "vincent.mitchell@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vmitchell85\\LaravelYoutubeLive\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vmitchell85\\LaravelYoutubeLive\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vmitchell85\\LaravelYoutubeLive\\LaravelYoutubeLiveServiceProvider"
+            ],
+            "aliases": {
+                "LaravelYoutubeLive": "Vmitchell85\\LaravelYoutubeLive\\LaravelYoutubeLiveFacade"
+            }
+        }
+    }
+}
